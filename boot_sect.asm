@@ -1,12 +1,13 @@
-[ORG 0x7c00]
 bits 16
+[ORG 0x7c00]
+
 boot_stuff:
 mov [BOOT_DRIVE], dl ; store boot drive for later use because the BIOS stores the boot drive in dl
 mov bp, 0x0550 ; set stack 
 mov sp, bp ; out of the way at 0x0550, there should be almost 30 kb of stack space up until bootloader, note to self use this space for more stuff later
-mov bx, 0x8000 ; Load 5 sectors to 0x0000(ES):0x8000(BX)
-mov dh, 7 ; from the boot disk.
-%assign len 7*512
+mov bx, 0x8000 ; Load 1 sector to 0x0000(ES):0x8000(BX)
+mov dh, 1 ; from the boot disk.
+%assign len 1*512
 %warning Loading len bytes of Kernel
 mov dl, [BOOT_DRIVE]
 call disk_load
