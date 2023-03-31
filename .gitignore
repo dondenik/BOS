@@ -1,5 +1,5 @@
 *.bin
 *.elf
-*-image
+*.o
 
 build/
