@@ -1,6 +1,6 @@
-#include "vga.c"
+#include "../drivers/vga.h"
 
 void main() {
-  VgaHandle vga = get_vga();
-  clear_screen(vga);
+  clear_screen();
+  kprint("> (shell not yet working lol)");
 }
