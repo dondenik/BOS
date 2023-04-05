@@ -14,6 +14,19 @@ int get_offset_col(int offset);
  **********************************************************/
 
 /**
+ * Gets the character at the cursor position.
+ * If `col` or `row` are negative then the character at the current cursor
+ * position is returned.
+ */
+char get_char_at(int col, int row) {
+  char *screen = (char *)VIDEO_ADDRESS;
+  if (col >= 0 && row >= 0)
+    return screen[get_offset(col, row)];
+  else
+    return screen[get_cursor_offset()];
+}
+
+/**
  * Print a message on the specified location
  * If col, row, are negative, we will use the current offset
  */
