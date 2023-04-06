@@ -12,3 +12,11 @@ better
 ## Building
 
 Run `make` to build and `make run` to run under QEMU.
+
+## Todo and Technical Notes
+
+- VGA text mode is 80x25.
+
+### Todo
+- Setup PIC and IDT
+- Setup keyboard drivers (After IDT)
