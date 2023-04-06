@@ -2,5 +2,5 @@
 
 void main() {
   clear_screen();
-  kprint("> (shell not yet working lol)");
+  kprint_at("Hello, World!", 10, -1, vga_attr(RED, BLUE));
 }
