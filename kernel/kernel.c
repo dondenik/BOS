@@ -2,5 +2,5 @@
 
 void main() {
   clear_screen();
-  kprint_at("Hello, World!", 10, -1, vga_attr(RED, BLUE));
+  kprint_at("Hello, World!", 10, -1, vga_attr(RED, DARK_BLUE));
 }
